@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DISNEY IPR VIOLATION TRACKER</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <main>
+    <h1>DISNEY IPR VIOLATION TRACKER</h1>
+    <form id="ipr-form">
+      <!-- File Upload for Excel Sheet -->
+      <div class="file-upload">
+        <label for="excel-upload">Upload Excel Sheet (IPR Data)</label>
+        <input type="file" id="excel-upload" accept=".xlsx, .xls, .csv" required>
+      </div>
+
+      <!-- Input for Website/Keyword -->
+      <div class="input-box">
+        <label>
+          <input name="website" placeholder="Enter website or keyword" type="text" required>
+        </label>
+        <button type="submit">Check IPR Violation</button>
+      </div>
+    </form>
+
+    <!-- Output Section -->
+    <div class="output">
+      <h2>Results:</h2>
+      <p id="result-text">(Results will appear here)</p>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/markdown-it@8.4.2/dist/markdown-it.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
